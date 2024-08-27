@@ -17,6 +17,7 @@ const UserList = React.lazy(()=> import("nextjscomponents/UserList"));
 // const BoardList= React.lazy(()=> import("nextjscomponents/BoardList"));
 // const BoardList = dynamic(import("nextjscomponents/BoardList"), { ssr: true });
 // import BoardList from 'nextjscomponents/BoardList';
+const MfeAngularjsComponent = React.lazy(()=>import("ng_mfe_expose/MfeAngularComponent"));
 
 var inited = false;
 
@@ -71,6 +72,14 @@ const BoardList = (props) => {
     )
 }
 
+const SuspendMfeAngularjsComponent = (props)=>{
+    return (
+        <Suspense fallback={ <p>Loading...</p> }>
+            <MfeAngularjsComponent fooBar={ 12 } baz='baz'/>
+        </Suspense>
+    )
+}
+
 const SuspenseUserList = (props) => {
     return (
         <Suspense fallback={<p>Loading...</p>}>
@@ -111,6 +120,13 @@ const configureRoutes = (props) => {
         "key": "/",
         "presenter": <Home { ...props } />,
         "breadcrumb": "홈",
+        "layout": "layout-1"
+    };
+
+    var mfeAngularjs = {
+        "key": "/mfr-angularjs",
+        "presenter": <SuspenseMfeAngularComponent { ...props } />,
+        "breadcrumb": "mfe3",
         "layout": "layout-1"
     };
 
@@ -170,6 +186,7 @@ const configureRoutes = (props) => {
     };
 
     routeList.push(home);
+    routeList.push(mfeAngularjs);
     routeList.push(userList);
     routeList.push(userAddition);
     routeList.push(boardList);
