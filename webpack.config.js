@@ -46,7 +46,7 @@ module.exports = (_, argv) => ({
       remotes: {
         "common": "common@http://127.0.0.1/pilot/common/remoteEntry.js",
         "nextjscomponents": "nextjscomponents@http://127.0.0.1/_next/static/remoteEntry.js",
-        "ng_mfe_expose": "ng_mfe@http://127.0.0.1:9000/pilot/mfe-angularjs-expose/remoteEntry.js"
+        "ng_mfe_expose": "ng_mfe_expose@http://127.0.0.1:9000/pilot/mfe-angularjs-expose/remoteEntry.js"
         // "nextjscomponents": "nextjscomponents@http://127.0.0.1:3007/_next/pages/board-list.js",
         // "nextjscomponents": `promise new Promise(res=>{
         //   getRemoteVersionForHost('consumer', 'nextjscomponents').then(('http://127.0.0.1:3007/_next/static/remoteEntry.js')=>{
