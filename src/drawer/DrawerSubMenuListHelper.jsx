@@ -10,6 +10,13 @@ var subMenuItemsGroupList = [];
 const userMgmtSubMenuItems = [
     {
         type: "ListItem",
+        name: 'AnglarJS',
+        state: { viewId: 'bodyMainView' },
+        link: "/mfe-angularjs",
+        Icon: PersonSearchIcon, 
+    },
+    {
+        type: "ListItem",
         name: '기술인목록',
         state: { viewId: 'bodyMainView' },
         link: "/user/list",
