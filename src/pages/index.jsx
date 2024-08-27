@@ -124,7 +124,7 @@ const configureRoutes = (props) => {
     };
 
     var mfeAngularjs = {
-        "key": "/mfr-angularjs",
+        "key": "/mfe-angularjs",
         "presenter": <SuspenseMfeAngularComponent { ...props } />,
         "breadcrumb": "mfe3",
         "layout": "layout-1"
